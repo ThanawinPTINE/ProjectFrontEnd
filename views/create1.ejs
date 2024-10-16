@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Room</title>
+    <link rel="stylesheet" href="../css/styleorange.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(255, 165, 0, 0.7);
+        }
+
+        form {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ff8c00;
+            border-radius: 5px;
+            background-color: #282828;
+            color: #fff;
+        }
+
+        input[type="submit"] {
+            background-color: #ff8c00;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e07b00;
+        }
+
+        a {
+            margin-top: 20px;
+            color: #ff8c00;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Room</h1>
+    <form method="post" action="/create1">
+        <label for="name">Room:</label>
+        <input type="text" id="name" name="name" placeholder="Enter room name..." required>
+        <input type="submit" value="Create">
+    </form>
+    <a href="/rooms">Back to List</a>
+</body>
+</html>

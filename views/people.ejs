@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+    <link rel="stylesheet" href="../css/stylepurple.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f; /* Dark background */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 0, 255, 0.7);
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 15px;
+            border: 1px solid #ff5e99; /* Pink border */
+            text-align: left;
+        }
+
+        th {
+            background-color: #2e2e4f; /* Darker background for header */
+            color: #ff5e99; /* Pink text for header */
+        }
+
+        tr:nth-child(even) {
+            background-color: #3a3a66; /* Slightly lighter background for even rows */
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ff5e99; /* Pink buttons */
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #e55a8b; /* Darker pink on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>People</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+        <% for(var i=0; i < people.length; i++) { %>
+            <tr>
+                <td><%= people[i].name %></td>
+                <td>
+                    <a href="/person/<%= people[i].id %>">View</a>
+                    <a href="/update2/<%= people[i].id %>">Edit</a>
+                    <a href="/delete2/<%= people[i].id %>">Delete</a>
+                </td>
+            </tr>
+        <% } %>
+    </table>
+    <div class="navigation">
+        <a href="/create2">Create New Person</a>
+        <a href="/">Home</a>
+    </div>
+</body>
+</html>

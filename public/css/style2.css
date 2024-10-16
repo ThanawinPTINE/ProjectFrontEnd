@@ -1,0 +1,70 @@
+/* Reset default margin and padding for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Set background color and font styles */
+body {
+  background-color: #f7f7f7; /* Light gray background color */
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Style the heading */
+h1 {
+  color: #333; /* Dark gray text color */
+  font-size: 42px;
+  margin-top: 30px;
+}
+
+/* Style the links */
+a {
+  display: inline-block;
+  margin: 20px;
+  padding: 12px 24px;
+  background-color: #3498db; /* Blue background color */
+  color: #fff; /* White text color */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a:hover {
+  background-color: #2980b9; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+/* Center the links */
+a {
+  display: block;
+}
+
+/* Container for links */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+/* Additional styling for specific links */
+a:nth-child(2) {
+  background-color: #e74c3c; /* Red background color */
+}
+
+a:nth-child(3) {
+  background-color: #f39c12; /* Orange background color */
+}
+
+a:nth-child(4) {
+  background-color: #9b59b6; /* Purple background color */
+}
+
+a:nth-child(5) {
+    background-color: #35e538; /* Purple background color */
+  }

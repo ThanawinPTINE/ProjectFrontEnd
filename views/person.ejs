@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Person</title>
+    <link rel="stylesheet" href="../css/stylepurple.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e2f; /* Dark background */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 0, 255, 0.7);
+        }
+
+        p {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #ff5e99; /* Pink button */
+            color: white;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        a:hover {
+            background-color: #e55a8b; /* Darker pink on hover */
+            transform: translateY(-2px); /* Slight lift on hover */
+        }
+
+        .navigation {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1><%= person.name %></h1>
+    <p>ID: <%= person.id %></p>
+    <div class="navigation">
+        <a href="/update2/<%= person.id %>">Edit</a>
+        <a href="/delete2/<%= person.id %>">Delete</a>
+        <a href="/people">Back to List</a>
+    </div>
+</body>
+</html>

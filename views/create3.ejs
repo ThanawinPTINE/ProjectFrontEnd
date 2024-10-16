@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Rent</title>
+    <link rel="stylesheet" href="../css/stylegreen.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #1a3c34; /* Dark green background */
+            color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 255, 128, 0.7);
+        }
+
+        form {
+            background-color: #2e5d56; /* Lighter green */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+            width: 300px;
+            text-align: center;
+        }
+
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #39ff14; /* Neon green border */
+            border-radius: 5px;
+            background-color: #3b6a62; /* Darker input background */
+            color: #ffffff;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            border-color: #39ff14; /* Neon green on focus */
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #39ff14; /* Neon green */
+            border: none;
+            border-radius: 5px;
+            color: black;
+            padding: 10px 20px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #32cc11; /* Darker neon green on hover */
+        }
+
+        a {
+            margin-top: 20px;
+            color: #39ff14; /* Neon green link */
+            text-decoration: none;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Create Rent</h1>
+    <form method="post" action="/create3">
+        <label for="r_id">Room-ID:</label>
+        <input type="number" id="r_id" name="r_id" required>
+        
+        <label for="p_id">Person-ID:</label>
+        <input type="number" id="p_id" name="p_id" required>
+        
+        <input type="submit" value="Create">
+    </form>
+    <a href="/renting">Back to List</a>
+</body>
+</html>
